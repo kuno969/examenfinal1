@@ -2,6 +2,18 @@ from io import BytesIO
 import json
 import os
 import requests
+import os
+
+# Acceder a las variables de entorno definidas en secrets.toml
+function_url = os.getenv("FUNCTION_URL")
+function_key = os.getenv("FUNCTION_KEY")
+
+# Usar las variables para crear la URL completa
+complete_url = f"{function_url}?code={function_key}"
+
+# Mostrar la URL completa en la aplicación de Streamlit
+import streamlit as st
+st.write(f"La URL completa es: {complete_url}")
 
 import matplotlib.pyplot as plt
 import streamlit as st
