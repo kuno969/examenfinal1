@@ -13,6 +13,7 @@ complete_url = f"{function_url}?code={function_key}"
 
 # Mostrar la URL completa en la aplicación de Streamlit
 import streamlit as st
+st.set_page_config(page_title="Chest X-ray Investigation", page_icon="🚑", layout="wide", initial_sidebar_state="collapsed")
 st.write(f"La URL completa es: {complete_url}")
 
 import matplotlib.pyplot as plt
@@ -46,7 +47,7 @@ FUNCTION_URL = os.environ["FUNCTION_URL"] + "?code=" + os.environ["FUNCTION_KEY"
 
 
 def main():
-    st.set_page_config(page_title="Chest X-ray Investigation", page_icon="🚑", layout="wide", initial_sidebar_state="collapsed")
+    
 
     st.sidebar.title("How-To")
 
